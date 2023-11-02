@@ -1,7 +1,14 @@
+---
+title: "Darkside Writeup - HackMyVM
+date: 2023-11-02
+categories: [Writeups, HackMyVM, Easy]
+tags: [Linux, Easy, Darkside, HackmyVM, privesc, burpsuite]
+---
 | Información |
 |------------|------------|------------|
 | Máquina: Darkside |
 | SO: Linux |
+| Dificultad: Easy |
 
 - Comenzamos escaneando nuestra propia red para ver que IP le ha asignado el DHCP a la máquina darkside.
 
@@ -27,9 +34,11 @@ nmap -sVC -p- 192.168.0.101 --min-rate 5000
 ![](/assets/img/posts/darkside/nmap2.png)
 
 > El parámetro -sVC es el conjunto de -sV (Service Version, te muestra las versiones de los servicios) y -sC (Script Scan, nos ayuda a encontrar vulnerabilidades conocidas).
+{: .prompt-tip }
 > El parámetro -p- indica que el escaneo se hará sobre los 65536 puertos.
+{: .prompt-tip }
 > El parámetro --min-rate 5000, estamos configurando una velocidad mínima de escaneo de 5000 paquetes por segundo, se puede configurar también un delay entre cada paquete y bajar el min rate para no hacer tanto ruido en la máquina victima.
->{: .prompt-tip }
+{: .prompt-tip }
 
 - Vemos dos servicios, SSH en el puerto 22 y HTTP en el 80, visitamos la página web.
 
@@ -47,6 +56,7 @@ dirb http://192.168.0.101/ /usr/share/wordlists/dirb/common.txt
 - Encontramos una URL interesante /backup, la buscamos en el navegador.
 
 >El resultado (CODE:) hace referencia al tipo de respuesta en el servidor, es decir la página /index.php lanza un código 200 (lo que en HTTP indica respuesta existosa) y la URL /server-status lanza un código 403 (lo que indica un acceso denegado), en cambio vemos que /backup es un directorio
+{: .prompt-tip }
 
 ![](/assets/img/posts/darkside/backup.png)
 
@@ -78,6 +88,7 @@ dirb http://192.168.0.101/ /usr/share/wordlists/dirb/common.txt
 ![](/assets/img/posts/darkside/ILOVEYOU.png)
 
 >El código 302 nos indica una redirección, es decir sabemos que es la correcta porque ha entrado en el login y lo ha enviado a una nueva página.
+{: .prompt-tip }
 
 - Probamos la credenciales y tenemos éxito, en la página web vemos una serie de letras y números pero no parecen ser un hash.
 
@@ -125,6 +136,7 @@ find / -perm /4000 2>/dev/null
 ```
 
 >El comando find / -perm /4000 2>/dev/null busca archivos con permiso setuid o setgid y muestra su ubicación
+{: .prompt-tip }
 
 - No encontramos nada de interés, hacemos un 
 ```bash
