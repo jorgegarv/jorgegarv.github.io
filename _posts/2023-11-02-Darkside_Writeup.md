@@ -4,6 +4,7 @@ date: 2023-11-02
 categories: [Writeups, HackMyVM, Easy]
 tags: [Linux, Easy, Darkside, HackmyVM, privesc, burpsuite]
 ---
+
 | Información |
 |------------|------------|------------|
 | Máquina: Darkside |
