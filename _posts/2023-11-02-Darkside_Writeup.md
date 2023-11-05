@@ -3,15 +3,18 @@ title: "Darkside Writeup - HackMyVM"
 date: 2023-11-02
 categories: [Writeups, HackMyVM, Easy]
 tags: [Linux, Easy, Darkside, HackmyVM, privesc, burpsuite]
+image:
+   path: /assets/img/posts/darkside/banner_darkside.jpg
+   lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
+   alt: banner darkside machine
 ---
 
 | Información |
 |------------|------------|------------|
 | Máquina: Darkside |
+|Creador: Boyras200 |
 | SO: Linux |
 | Dificultad: Easy |
-
-![](/assets/img/posts/darkside/banner_darkside.jpg)
 
 ## Descubrir IP
 
@@ -41,11 +44,11 @@ nmap -sVC -p- 192.168.0.101 --min-rate 5000
 ![](/assets/img/posts/darkside/nmap2.png)
 
 > El parámetro -sVC es el conjunto de -sV (Service Version, te muestra las versiones de los servicios) y -sC (Script Scan, nos ayuda a encontrar vulnerabilidades conocidas).
-{: .prompt-tip }
+{: .prompt-info }
 > El parámetro -p- indica que el escaneo se hará sobre los 65536 puertos.
-{: .prompt-tip }
+{: .prompt-info }
 > El parámetro --min-rate 5000, estamos configurando una velocidad mínima de escaneo de 5000 paquetes por segundo, se puede configurar también un delay entre cada paquete y bajar el min rate para no hacer tanto ruido en la máquina victima.
-{: .prompt-tip }
+{: .prompt-info }
 
 - Vemos dos servicios, SSH en el puerto 22 y HTTP en el 80, visitamos la página web.
 
@@ -65,7 +68,7 @@ dirb http://192.168.0.101/ /usr/share/wordlists/dirb/common.txt
 - Encontramos una URL interesante /backup, la buscamos en el navegador.
 
 >El resultado (CODE:) hace referencia al tipo de respuesta en el servidor, es decir la página /index.php lanza un código 200 (lo que en HTTP indica respuesta existosa) y la URL /server-status lanza un código 403 (lo que indica un acceso denegado), en cambio vemos que /backup es un directorio
-{: .prompt-tip }
+{: .prompt-info }
 
 ![](/assets/img/posts/darkside/backup.png)
 
@@ -146,7 +149,7 @@ ssh kevin@192.168.0.101
 find / -perm /4000 2>/dev/null
 ```
 
->El comando find / -perm /4000 2>/dev/null busca archivos con permiso setuid o setgid y muestra su ubicación
+>El comando find / -perm /4000 2>/dev/null busca archivos con permiso setuid y muestra su ubicación
 {: .prompt-tip }
 
 - No encontramos nada de interés, hacemos un 
