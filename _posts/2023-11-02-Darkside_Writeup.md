@@ -11,6 +11,10 @@ tags: [Linux, Easy, Darkside, HackmyVM, privesc, burpsuite]
 | SO: Linux |
 | Dificultad: Easy |
 
+![](/assets/img/posts/darkside/banner_darkside.jpg)
+
+## Descubrir IP
+
 - Comenzamos escaneando nuestra propia red para ver que IP le ha asignado el DHCP a la máquina darkside.
 
 - Primero es necesario ver en que red estamos.
@@ -27,6 +31,8 @@ nmap -sP 192.168.0.0/24 | grep "scan"
 
 - Ya tenemos la IP de darkside: 192.168.0.101
 
+## Enumeración
+
 - Realizamos un nmap para ver que servicios están corriendo en la máquina.
 
 ``` bash
@@ -42,6 +48,8 @@ nmap -sVC -p- 192.168.0.101 --min-rate 5000
 {: .prompt-tip }
 
 - Vemos dos servicios, SSH en el puerto 22 y HTTP en el 80, visitamos la página web.
+
+## Foothold
 
 - Nos encontramos un login
 
@@ -130,6 +138,8 @@ ssh kevin@192.168.0.101
 ```
 
 ![](/assets/img/posts/darkside/dentrossh.png)
+
+## Privesc
 
 - En este punto, comenzamos la escala de privilegios, empezamos con un
 ```bash
