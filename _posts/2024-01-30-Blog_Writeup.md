@@ -18,7 +18,7 @@ image:
 
 En el caso de esta máquina el propio creador RiJaba1 nos da la IP de la misma en el login de la máquina.
 
-En mi caso va a ser la
+En mi caso va a ser la:
 
 ```zsh
 192.168.0.30
