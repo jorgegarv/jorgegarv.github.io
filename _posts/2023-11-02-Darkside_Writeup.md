@@ -16,6 +16,7 @@ image:
 | SO: Linux |
 | Dificultad: Easy |
 
+
 ## Descubrir IP
 
 - Comenzamos escaneando nuestra propia red para ver que IP le ha asignado el DHCP a la máquina darkside.
