@@ -9,7 +9,6 @@ image:
    alt: Banner blog
 ---
 
-
 | Información |
 |------------|------------|------------|
 | Máquina: Blog |
