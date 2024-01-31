@@ -9,6 +9,7 @@ image:
    alt: banner bash
 ---
 
+
 Cuando ganamos acceso a una máquina nos encontramos con una TTY no interactiva, en la que no podemos movernos de una forma cómoda.
 
 Para poder trabajar comodamente como lo harías en tu consola el tratamiento a seguir es el siguiente:
