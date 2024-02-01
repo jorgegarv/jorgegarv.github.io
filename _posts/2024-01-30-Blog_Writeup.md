@@ -19,7 +19,7 @@ image:
 
 En el caso de esta máquina el propio creador d4t4s3c nos da la IP de la misma en el login de la máquina.
 
-En mi caso va a ser la:
+En mi laboratorio la IP que vamos a usar será:
 
 ```zsh
 192.168.0.30
