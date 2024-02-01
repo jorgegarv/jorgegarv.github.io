@@ -13,7 +13,7 @@ image:
 | Información |
 |------------|------------|------------|
 | Máquina: Blog |
-| Creador: RiJaba1 |
+| Creador: d4t4s3c |
 | SO: Linux |
 | Dificultad: Easy |
 
