@@ -17,7 +17,7 @@ image:
 | SO: Linux |
 | Dificultad: Easy |
 
-En el caso de esta máquina el propio creador RiJaba1 nos da la IP de la misma en el login de la máquina.
+En el caso de esta máquina el propio creador d4t4s3c nos da la IP de la misma en el login de la máquina.
 
 En mi caso va a ser la:
 
