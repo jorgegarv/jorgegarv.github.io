@@ -52,7 +52,7 @@ $factorial *= $i; }
 echo "El factorial de $num es: $factorial"; ?>
 ```
 
-7.**Calcular el promedio de un arreglo de números:**
+7.**Calcular el promedio de un array de números:**
 
 ```php
 <?php $numeros = array(10, 15, 20, 25, 30); 
