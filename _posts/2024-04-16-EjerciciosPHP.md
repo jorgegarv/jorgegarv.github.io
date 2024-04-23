@@ -1,3 +1,14 @@
+---
+title: "Ejercicios básicos PHP"
+date: 2024-04-16
+categories: [ejercicios, programacion, php]
+tags: [Linux, Easy, php, ejercicios]
+image:
+   path: /assets/img/posts/arroutada/Arroutada.png
+   lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurm>
+   alt: Banner Arroutada
+---
+
 1. **Imprimir "Hola, mundo!" en pantalla:**
 
 ```php
