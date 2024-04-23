@@ -25,7 +25,8 @@ echo "La suma de $num1 y $num2 es: $suma"; ?>
 3.**Calcular el área de un rectángulo:**
 
 ```php
-<?php $base = 10; $altura = 5; $area = $base * $altura; 
+<?php $base = 10; $altura = 5; 
+$area = $base * $altura; 
 echo "El área del rectángulo es: $area"; ?>
 ```
 4.**Imprimir los números del 1 al 10:**
