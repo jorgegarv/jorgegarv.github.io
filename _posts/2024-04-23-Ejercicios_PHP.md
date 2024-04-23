@@ -1,12 +1,11 @@
----
 title: "Ejercicios básicos PHP"
 date: 2024-04-16
 categories: [ejercicios, programacion, php]
 tags: [Linux, Easy, php, ejercicios]
 image:
-   path: /assets/img/posts/php/php.jpeg
+   path: /assets/img/posts/php/php.png
    lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurm>
-   alt: Ejercicios en PHP
+   alt: ejercicios en php
 ---
 
 1.**Imprimir "Hola, mundo!" en pantalla:**
@@ -67,3 +66,7 @@ image:
 ```php
 <?php $texto = "Hola mundo"; $invertido = strrev($texto); echo "La cadena invertida es: $invertido"; ?>
 ```
+
+
+
+
