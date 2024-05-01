@@ -1,8 +1,8 @@
 ---
 title: "Domain Writeup - DockerLabs"
 date: 2024-05-01
-categories: [Writeups, DockersLabs, Easy]
-tags: [Linux, Easy, Domain, Dockerlabs, privesc, smb, nano, port, revshell]
+categories: [Writeups, DockersLabs, Medium]
+tags: [Linux, Medium, Domain, Dockerlabs, privesc, smb, nano, port, revshell]
 image:
    path: /assets/img/posts/domain/banner.png
    lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
@@ -14,7 +14,7 @@ image:
 | Máquina: Domain |
 | Creador: El Pingüino de Mario |
 | SO: Linux |
-| Dificultad: Easy |
+| Dificultad: Medium |
 
 <hr>
 Esta máquina está alojada en [DockersLabs](https://dockerlabs.es), una nueva plataforma creada por [ElPingüinoDeMario](https://www.linkedin.com/in/maalfer1/) con un concepto diferente al que estamos acostumbrados, en lugar de conectarnos a una vpn o virtualizar una máquina se realiza la conexión a la máquina vulnerable a través de Docker, pudiendo correr en la propia máquina atacante la víctima, una muy buena idea para ahorrar recursos.
@@ -119,7 +119,7 @@ No somos capaces de leerlo, sin embargo haciendo la llamada directamente con el 
 
 ![](/assets/img/posts/domain/shadow.png)
 
-Sin embargo se puede comprobar que el inicio de sesión con contraseña está desactivado para root 
+Se puede observar que el inicio de sesión con contraseña está desactivado para root 
 
 ![](/assets/img/posts/domain/root.png)
 
