@@ -55,7 +55,7 @@ else:
     # Si la solicitud no fue exitosa, imprimimos un mensaje de error junto con el código de estado
     print("Error al cargar la página:", response.status_code)
 ```
-El primer paso es ver como está estructurada la web a scrapear, en este caso queremos sacar cita y autor de [http://quotes.toscrape.com](http://quotes.toscrape.com/). <br>
+El primer paso es ver como está estructurada la web a scrapear, en este caso queremos sacar cita y autor de [http://quotes.toscrape.com](https://quotes.toscrape.com/). <br>
 
 Podemos observar las etiquetas viendo su código fuente:
 
