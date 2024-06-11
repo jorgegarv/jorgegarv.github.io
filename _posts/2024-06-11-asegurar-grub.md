@@ -17,22 +17,28 @@ Uno de los principales riesgos de seguridad asociados con GRUB es la posibilidad
 
 En resumen, asegurar GRUB es esencial para garantizar la seguridad del sistema durante el proceso de arranque y protegerlo contra posibles amenazas de seguridad.
 
+>Previo a la configuración es muy recomendable realizar una backup o un spanshot.
+{: .prompt-warning }
+
 ## Configurar contraseña de GRUB:
 
 Para configurar una contraseña en GRUB y evitar que personas no autorizadas realicen cambios en las opciones de arranque o accedan a los modos de edición desde el menú de GRUB, sigue estos pasos:
 
-Abre el archivo de configuración de GRUB. Típicamente, este archivo se encuentra en la ubicación `/etc/default/grub`.
+Abre el archivo de configuración de GRUB. Típicamente, este archivo se encuentra en la ubicación `/etc/grub.d/00_header`.
 
 ![](/assets/img/posts/grub/etcgrub.png)
 
 Agrega la siguiente línea al archivo:
 
 ```zsh
-GRUB_PASSWORD=contraseña_encriptada
+cat << EOF  
+set superusers="root"  
+password_pbkdf2 root `Aquí va la contraseña cifrada`  
+EOF
 ```
 ![](/assets/img/posts/grub/passetc.png)
 
-Reemplaza `contraseña_encriptada` con la contraseña encriptada que deseas utilizar. Puedes generar una contraseña encriptada utilizando el comando `grub-mkpasswd-pbkdf2`.
+Reemplaza `Aquí va la contraseña cifrada` con la contraseña encriptada que deseas utilizar. Puedes generar una contraseña encriptada utilizando el comando `grub-mkpasswd-pbkdf2`.
 
 ![](/assets/img/posts/grub/encrypted.png)
 
