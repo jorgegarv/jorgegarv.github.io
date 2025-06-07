@@ -19,8 +19,7 @@ title: Blog - Jorge García
 tagline: Development, Writeups & Pentesting
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
-
+  Un blog técnico con tutoriales paso a paso sobre sistemas operativos, redes Cisco, desarrollo de software y ciberseguridad. Aprende, optimiza y mejora tus habilidades IT con contenido actualizado y práctico.
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://jorgegarv.github.io"
