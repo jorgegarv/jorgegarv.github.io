@@ -19,17 +19,17 @@ Esta herramienta oficial de Spring nos facilita la creación de proyectos Spring
 
 Voy a usar esta configuración para empezar con el proyecto.
 
-![](../assets/img/posts/api-springboot/config-initializr.png)
+![](/assets/img/posts/api-springboot/config-initializr.png)
 
 Además, incluimos la dependencia Web, que agrega todas las librerías necesarias para construir aplicaciones web con Spring Boot, especialmente APIs REST.
 
-![](../assets/img/posts/api-springboot/add-dep.png)
+![](/assets/img/posts/api-springboot/add-dep.png)
 
-![](../assets/img/posts/api-springboot/add-web.png)
+![](/assets/img/posts/api-springboot/add-web.png)
 
 Con esta configuración generamos el zip del proyecto.
 
-![](../assets/img/posts/api-springboot/generate.png)
+![](/assets/img/posts/api-springboot/generate.png)
 
 >Para poder ejecutar el proyecto con Java 17, es necesario tener instalado el JDK 17 o superior
 {: .prompt-warning }
@@ -41,19 +41,19 @@ Se nos descarga un archivo comprimido con todo el proyecto, lo descomprimimos en
 
 Dentro del IDE abrimos el proyecto de Spring boot.
 
-![](../assets/img/posts/api-springboot/open-intelli.png)
+![](/assets/img/posts/api-springboot/open-intelli.png)
 
-![](../assets/img/posts/api-springboot/proyecto-abierto.png)
+![](/assets/img/posts/api-springboot/proyecto-abierto.png)
 
 Ya tenemos el proyecto listo para modificarlo con las dependencias y la estructura Maven.
 
 Crearemos el paquete _models_ dentro del paquete principal com.tuusuario.CRUDBasico para añadir nuestra clase Usuario.
 
-![](../assets/img/posts/api-springboot/new-pack.png)
+![](/assets/img/posts/api-springboot/new-pack.png)
 
 Ahora sí, creamos la clase Usuario dentro del paquete _models_
 
-![](../assets/img/posts/api-springboot/user-class.png)
+![](/assets/img/posts/api-springboot/user-class.png)
 
 Definimos los atributos del Usuario, creamos los getters y setters, y el constructor de Usuario.
 
@@ -103,11 +103,11 @@ public class Usuario {
 
 Con la clase Usuario creada dentro de nuestro paquete _models_ crearemos un nuevo paquete en el raíz llamado _controllers_
 
-![](../assets/img/posts/api-springboot/new-controller.png)
+![](/assets/img/posts/api-springboot/new-controller.png)
 
 Dentro de controllers crearemos la clase UsuarioController, está clase será la encargada de gestionar las solicitudes HTTP que lleguen a la API.
 
-![](../assets/img/posts/api-springboot/controller-crea.png)
+![](/assets/img/posts/api-springboot/controller-crea.png)
 
 Con la clase de UsuarioController lo primero que haremos será anotarla como @RestController, para que la clase funcione como controlador REST. 
 
@@ -286,7 +286,7 @@ public class UsuarioController {
 
 Para probar la API y lanzar las peticiones primero hay que inicializar la aplicación desde la clase principal.
 
-![](../assets/img/posts/api-springboot/lanzar-app.png)
+![](/assets/img/posts/api-springboot/lanzar-app.png)
 
 Al inicializarla se levantará un servidor que por defecto se alojará en el puerto 8080.
 
@@ -296,7 +296,7 @@ Para probar nuestro método GET desde cualquier navegador haremos una llamada a 
 
 Recordemos que este método nos devuelve los usuarios guardados en el ArrayList.
 
-![](../assets/img/posts/api-springboot/test-get.png)
+![](/assets/img/posts/api-springboot/test-get.png)
 
 >Aquí podemos ver como al llamar por GET a /usuarios nos da la lista de los mismos
 {: .prompt-info }
@@ -334,7 +334,7 @@ El JSON que he usado para añadir este usuario en Postman ha sido:
 
 Comprobamos haciendo una llamada al método GET que se han creado tanto el usuario por cURL como el usuario por Postman
 
-![](../assets/img/posts/api-springboot/new-users.png)
+![](/assets/img/posts/api-springboot/new-users.png)
 
 ## Petición PUT
 
@@ -356,7 +356,7 @@ curl -X PUT http://localhost:8080/usuarios/3 -H "Content-Type: application/json"
 
 Comprobamos haciendo una llamada al método GET que se ha modificado correctamente el usuario con el id 3
 
-![](../assets/img/posts/api-springboot/modifi-put.png)
+![](/assets/img/posts/api-springboot/modifi-put.png)
 
 ## Petición DELETE
 
