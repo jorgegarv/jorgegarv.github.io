@@ -225,7 +225,7 @@ En la petición PUT haremos modificaciones sobre los campos del usuario (nombre 
 >Usamos anotación @PathVariable para indicar el id a través de la URL y @RequestBody para enviar la información a modificar a través de JSON
 {: .prompt-info }
 
- ### El código completo de la clase UsuarioController queda así:
+### El código completo de la clase UsuarioController queda así:
 
 ```java
 package com.jorgegarv.CRUDBasico.controllers;
