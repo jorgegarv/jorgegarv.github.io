@@ -377,5 +377,5 @@ Recordemos que el método DELETE elimina un usuario existente en nuestro ArrayLi
 >Esto hará que los usuario con id 4 (Sadie Adler) e id 5 (Micah Bell) sean eliminados
 {: .prompt-info }
 
->CRUD educativo con Spring Boot (ArrayList temporal, sin validaciones/seguridad). Con la finalidad de entender lo básico antes de añadir JPA y Spring Security en futuros tutoriales.
+>Esto es un CRUD *educativo* con Spring Boot (ArrayList temporal, sin validaciones/seguridad). Con la finalidad de entender lo básico antes de añadir JPA y Spring Security en futuros tutoriales.
 {: .prompt-warning }
